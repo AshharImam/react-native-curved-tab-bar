@@ -45,15 +45,40 @@
   "keywords": [
     "react-native",
     "ios",
-    "android"
+    "android",
+    "curved",
+    "tab",
+    "tab-bar",
+    "animated",
+    "customizable"
   ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/AshharImam/react-native-curved-tab-bar.git"
   },
-  "author": "Ashhar Imam <ashharimam490@gmail.com> (https://github.com/AshharImam)",
+  "author": {
+    "name": "Ashhar Imam",
+    "email": "ashharimam490@gmail.com",
+    "url": "https://github.com/AshharImam"
+  },
   "contributors": [
-    "Sarmad Shakeel <sarmadshakeel20@gmail.com> (https://github.com/sarmad-321)"
+    {
+      "name": "Sarmad Shakeel",
+      "email": "sarmadshakeel20@gmail.com",
+      "url": "https://github.com/sarmad-321"
+    }
+  ],
+  "maintainers": [
+    {
+      "name": "Ashhar Imam",
+      "email": "ashharimam490@gmail.com",
+      "url": "https://github.com/AshharImam"
+    },
+    {
+      "name": "Sarmad Shakeel",
+      "email": "sarmadshakeel20@gmail.com",
+      "url": "https://github.com/sarmad-321"
+    }
   ],
   "license": "MIT",
   "bugs": {

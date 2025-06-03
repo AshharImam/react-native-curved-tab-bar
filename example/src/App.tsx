@@ -7,17 +7,23 @@ const tabs: TabItem[] = [
   {
     key: 'home',
     label: 'Home',
-    icon: require('./assets/home-icon.png'),
+    icon: {
+      uri: 'https://cdn-icons-png.flaticon.com/128/1946/1946488.png',
+    },
   },
   {
     key: 'search',
     label: 'Search',
-    icon: require('./assets/search-icon.png'),
+    icon: {
+      uri: 'https://cdn-icons-png.flaticon.com/128/622/622669.png',
+    },
   },
   {
     key: 'profile',
     label: 'Profile',
-    icon: require('./assets/profile-icon.png'),
+    icon: {
+      uri: 'https://cdn-icons-png.flaticon.com/128/1144/1144760.png',
+    },
     badgeCount: 3,
   },
 ];
