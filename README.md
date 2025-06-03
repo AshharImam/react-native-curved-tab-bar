@@ -14,6 +14,8 @@ A beautiful, customizable curved tab bar component for React Native with smooth 
 - 📱 iOS and Android compatible
 - 🚀 Lightweight with minimal dependencies (only react-native-svg required)
 
+## 📱 Demo
+
 <p>
   <img src="https://raw.githubusercontent.com/AshharImam/react-native-curved-tab-bar/main/assets/animatedTabGif.gif" width="300" />
 </p>
