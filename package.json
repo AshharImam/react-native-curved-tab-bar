@@ -3,11 +3,11 @@
   "version": "0.1.0",
   "description": "A customizable curved tab bar component for React Native with smooth animations",
   "main": "./lib/module/index.js",
-  "types": "./lib/typescript/src/index.d.ts",
+  "types": "./lib/typescript/index.d.ts",
   "exports": {
     ".": {
       "source": "./src/index.tsx",
-      "types": "./lib/typescript/src/index.d.ts",
+      "types": "./lib/typescript/index.d.ts",
       "default": "./lib/module/index.js"
     },
     "./package.json": "./package.json"
@@ -35,10 +35,12 @@
     "example": "yarn workspace react-native-curved-tab-bar-example",
     "test": "jest",
     "typecheck": "tsc",
-    "lint": "eslint \"**/*.{js,ts,tsx}\"",
     "clean": "del-cli lib",
     "prepare": "bob build",
-    "release": "release-it --only-version"
+    "release": "release-it --only-version",
+    "lint": "eslint \"**/*.{js,ts,tsx}\"",
+    "format": "prettier --write \"**/*.{js,ts,tsx,json,md}\"",
+    "format:check": "prettier --check \"**/*.{js,ts,tsx,json,md}\""
   },
   "keywords": [
     "react-native",
@@ -50,6 +52,9 @@
     "url": "git+https://github.com/AshharImam/react-native-curved-tab-bar.git"
   },
   "author": "Ashhar Imam <ashharimam490@gmail.com> (https://github.com/AshharImam)",
+  "contributors": [
+    "Sarmad Shakeel <sarmadshakeel20@gmail.com> (https://github.com/sarmad-321)"
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/AshharImam/react-native-curved-tab-bar/issues"
@@ -79,12 +84,14 @@
     "react": "19.0.0",
     "react-native": "0.79.2",
     "react-native-builder-bob": "^0.40.8",
+    "react-native-svg": "^15.12.0",
     "release-it": "^17.10.0",
     "typescript": "^5.8.3"
   },
   "peerDependencies": {
     "react": "*",
-    "react-native": "*"
+    "react-native": "*",
+    "react-native-svg": "^15.0.0"
   },
   "workspaces": [
     "example"
