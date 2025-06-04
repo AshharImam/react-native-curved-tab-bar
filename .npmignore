@@ -1,0 +1,43 @@
+# Ignore example project
+example/
+example/**
+
+# Dependencies
+node_modules/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build output
+dist/
+build/
+*.tgz
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Tests and coverage
+coverage/
+*.test.js
+*.test.ts
+*.spec.js
+*.spec.ts
+jest.config.js
+
+# IDE/editor settings
+.idea/
+.vscode/
+*.swp
+
+# Environment variables
+.env
+.env.local
+.env.production
+.env.development
+
+# Miscellaneous
+.pnpm-debug.log*
+*.lock
