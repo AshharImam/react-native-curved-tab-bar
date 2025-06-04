@@ -67,3 +67,28 @@ jobs:
       - name: Build example for Web
         run: |
           yarn example expo export --platform web
+
+  publish:
+  if: github.ref == 'refs/heads/main' && startsWith(github.event.head_commit.message, 'release:')
+  runs-on: ubuntu-latest
+  needs: build-library # ensure it's built before publish
+  steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Setup Node
+      uses: actions/setup-node@v4
+      with:
+        node-version: 18
+        registry-url: 'https://registry.npmjs.org/'
+
+    - name: Install dependencies
+      run: yarn install --immutable
+
+    - name: Build package
+      run: yarn prepare
+
+    - name: Publish to NPM
+      run: npm publish --access public
+      env:
+        NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
