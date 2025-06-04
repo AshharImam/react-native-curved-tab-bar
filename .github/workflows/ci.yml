@@ -45,8 +45,24 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup
-        uses: ./.github/actions/setup
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '23'
+          cache: 'yarn'
+
+      - name: Clear Yarn cache
+        run: yarn cache clean
+
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+
+      - name: Debug environment
+        run: |
+          node --version
+          yarn --version
+          ls -la node_modules/arktype/ || echo "arktype not found"
+          ls -la node_modules/react-native-builder-bob/ || echo "builder-bob not found"
 
       - name: Build package
         run: yarn prepare
@@ -58,8 +74,14 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup
-        uses: ./.github/actions/setup
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '23'
+          cache: 'yarn'
+
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
 
       - name: Build package
         run: yarn prepare
